@@ -19,7 +19,7 @@
     },
     "require": {
         "neos/neos": "^4.0 || ^5.0 || dev-master",
-        "avency/swagger-php": "dev-master"
+        "avency/swagger-php": "3.0.3"
     },
     "autoload": {
         "psr-4": {
