@@ -1,0 +1,16 @@
+privilegeTargets:
+  Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    'Avency.Neos.OpenApi:FrontendApiController':
+      matcher: 'method(Avency\Neos\OpenApi\Controller\ApiController->(.*)Action())'
+    'Avency.Neos.OpenApi:BackendModuleOpenApi':
+      matcher: 'method(Avency\Neos\OpenApi\Controller\Module\.*Controller->.*Action())'
+
+roles:
+  'Neos.Neos:Administrator':
+    privileges:
+      -
+        privilegeTarget: 'Avency.Neos.OpenApi:FrontendApiController'
+        permission: GRANT
+      -
+        privilegeTarget: 'Avency.Neos.OpenApi:BackendModuleOpenApi'
+        permission: GRANT

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file original="" product-name="Avency.Neos.OpenApi" source-language="en" datatype="plaintext" target-language="de">
+        <body>
+            <trans-unit id="label" xml:space="preserve" approved="yes">
+                <source>Documentation</source>
+                <target xml:lang="de">Dokumentation</target>
+            </trans-unit>
+            <trans-unit id="description" xml:space="preserve" approved="yes">
+                <source>View OpenAPI documentation for a RESTful API.</source>
+                <target xml:lang="de">Hier kann die OpenAPI-Dokumentation für eine RESTful-API angesehen werden.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
