@@ -1,0 +1,31 @@
+<div id="swagger-ui"></div>
+
+<script src="{f:uri.resource(path: 'JavaScript/swagger-ui-bundle.js')}" type='text/javascript'></script>
+<script src="{f:uri.resource(path: 'JavaScript/swagger-ui-standalone-preset.js')}" type='text/javascript'></script>
+<link rel="stylesheet" type="text/css" href="{f:uri.resource(path: 'CSS/swagger-ui.css')}" >
+
+<script>
+    <![CDATA[
+    var url = ']]>{f:uri.action(action: 'getApiJson', controller: 'Api', useMainRequest: true, format: 'json', absolute: true)}<![CDATA[';
+
+    window.onload = function() {
+        // Begin Swagger UI call region
+        const ui = SwaggerUIBundle({
+            url: url,
+            dom_id: '#swagger-ui',
+            deepLinking: true,
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIStandalonePreset
+            ],
+            plugins: [
+                SwaggerUIBundle.plugins.DownloadUrl
+            ],
+            layout: "StandaloneLayout"
+        })
+        // End Swagger UI call region
+
+        window.ui = ui
+    }
+    ]]>
+</script>

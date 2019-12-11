@@ -1,0 +1,42 @@
+Avency:
+  Neos:
+    OpenApi:
+      # Path to files which should be considered in documentation
+      scanPath: '%FLOW_PATH_ROOT%LocalPackages'
+      moduleConfiguration:
+        widgetTemplatePathAndFileName: 'resource://Neos.Neos/Private/Templates/Module/Widget.html'
+Neos:
+  Flow:
+    mvc:
+      routes:
+        'Avency.Neos.OpenApi':
+          position: 'before Neos.Neos'
+    security:
+      authentication:
+        providers:
+          'Neos.Neos:Backend':
+            requestPatterns:
+              'Avency.Neos.OpenApi:ApiController':
+                pattern: 'ControllerObjectName'
+                patternOptions:
+                  controllerObjectNamePattern: 'Avency\Neos\OpenApi\Controller\.*'
+  Neos:
+    modules:
+      openApi:
+        label: 'Avency.Neos.OpenApi:Modules.Overview:label'
+        controller: \Avency\Neos\OpenApi\Controller\Module\OverviewController
+        privilegeTarget: 'Avency.Neos.OpenApi:BackendModuleOpenApi'
+        icon: 'icon-comments'
+        submodules:
+          documentation:
+            label: 'Avency.Neos.OpenApi:Modules.Documentation:label'
+            description: 'Avency.Neos.OpenApi:Modules.Documentation:description'
+            controller: \Avency\Neos\OpenApi\Controller\Module\DocumentationController
+            privilegeTarget: 'Avency.Neos.OpenApi:BackendModuleOpenApi'
+            icon: 'icon-code'
+            styleSheets:
+              - 'resource://Avency.Neos.OpenApi/Public/CSS/backend.css'
+    userInterface:
+      translation:
+        autoInclude:
+          'Avency.Neos.OpenApi': ['Modules/*']

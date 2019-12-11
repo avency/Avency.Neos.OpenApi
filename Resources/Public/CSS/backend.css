@@ -1,0 +1,11 @@
+.neos-content {
+    background: #fff !important;
+}
+
+.swagger-ui .topbar {
+    background: #222 !important;
+}
+.swagger-ui .info .title {
+    margin-bottom: 20px !important;
+}
+
