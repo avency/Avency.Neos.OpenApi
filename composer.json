@@ -17,15 +17,9 @@
         "issues": "https://github.com/avency/Avency.Neos.OpenApi/issues",
         "source": "https://github.com/avency/Avency.Neos.OpenApi"
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/sintbert/swagger-php"
-        }
-    ],
     "require": {
         "neos/neos": "^4.0 || ^5.0 || dev-master",
-        "sintbert/swagger-php": "dev-master"
+        "avency/swagger-php": "dev-master"
     },
     "autoload": {
         "psr-4": {
